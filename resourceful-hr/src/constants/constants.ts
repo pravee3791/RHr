@@ -1,0 +1,1 @@
+export const URLENDPOINT = `https://jsonplaceholder.typicode.com/albums/1/photos`
