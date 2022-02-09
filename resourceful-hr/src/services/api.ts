@@ -5,11 +5,11 @@ import { URLENDPOINT } from "../constants/constants";
 /**
  * Singleton Employee Class to get employee data from the api code
  */
-class EmployeeService {
-    private static instance: EmployeeService;
+class AlbumService {
+    private static instance: AlbumService;
     static getInstance() {
         if (!this.instance) {
-            this.instance = new EmployeeService()
+            this.instance = new AlbumService()
         }
         return this.instance;
     }
@@ -24,5 +24,5 @@ class EmployeeService {
 
 }
 
- const employeeService = EmployeeService.getInstance()
- export default employeeService;
+ const albumservice = AlbumService.getInstance()
+ export default albumservice;
