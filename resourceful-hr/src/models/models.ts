@@ -1,4 +1,4 @@
-export interface Image {
+export interface IImage {
     albumId: number,
     id: number,
     title: string,
@@ -6,5 +6,5 @@ export interface Image {
     thumbnailUrl: string
 }
 
-export interface IAlbum extends Array<Image> {};
+export interface IAlbum extends Array<IImage> {};
 
