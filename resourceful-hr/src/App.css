@@ -29,6 +29,15 @@ body html {
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
 }
+@media (max-width:320px){
+  .home {
+  border: 1px solid #dddd;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+}
 
 .imageContainer {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);

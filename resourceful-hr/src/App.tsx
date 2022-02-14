@@ -1,3 +1,4 @@
+import React, { Fragment } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +8,8 @@ import { Provider } from "react-redux";
 import store from "./stores/store";
 import Home from "./pages/home";
 import Upload from "./pages/upload";
+import ProtectedRoute from "./Routes/protectedRoute";
+import Auth from "./pages/auth";
 import './App.css';
 
 
@@ -15,10 +18,15 @@ function App() {
     <div>
       <Provider store={store}>
         <Router>
-          <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/upload' element={<Upload></Upload>}></Route>
-          </Routes>
+          <Fragment>
+            <Routes>
+              <Route path='/authenticate' element={<Auth></Auth>}></Route>
+              <ProtectedRoute redirectTo='/authenticate'>
+                <Route path='/' element={<Home></Home>}></Route>
+                <Route path='/upload' element={<Upload></Upload>}></Route>
+              </ProtectedRoute>
+            </Routes>
+          </Fragment>
         </Router>
       </Provider>
     </div>
