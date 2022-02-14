@@ -6,6 +6,7 @@ import {
 import { Provider } from "react-redux";
 import store from "./stores/store";
 import Home from "./pages/home";
+import Upload from "./pages/upload";
 import './App.css';
 
 
@@ -16,6 +17,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/upload' element={<Upload></Upload>}></Route>
           </Routes>
         </Router>
       </Provider>

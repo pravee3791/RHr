@@ -10,6 +10,7 @@ body html {
   margin: 0;
   padding: 0;
 }
+
 .header {
   min-height: 50px;
   display: flex;
@@ -20,18 +21,85 @@ body html {
   background-size: contain;
   background-color: #e5e5e5;
 }
-.home{
+
+.home {
   border: 1px solid #dddd;
   margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
 }
-.imageContainer{
+
+.imageContainer {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border: 1px solid #dddd;
 }
-.imageContainer img{
+
+.imageContainer img {
   height: 100%;
-  width:100%;
+  width: 100%;
+}
+
+.uploadFile {
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+}
+
+.uploadButton {
+  background: transparent;
+  border: solid 1px #27a9e0;
+  border-radius: 3px;
+  color: #27a9e0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none !important;
+  padding: 10px 20px;
+  cursor: pointer !important;
+}
+
+.uploadFileHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.uploadFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.fileUploader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.fileName {
+  margin: auto;
+  display: table;
+  border: 1px solid red;
+}
+
+.successMessage {
+  background: transparent;
+  border: solid 1px #27a9e0;
+  border-radius: 3px;
+  color: #27a9e0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none !important;
+  padding: 10px 20px;
+  cursor: pointer !important;
+}
+.progessBarContainer{
+  width: 50%;
+  /* width: 20rem; */
 }
