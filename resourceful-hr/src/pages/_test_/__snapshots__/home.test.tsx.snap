@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` Home Page matches snapshot 1`] = `
+Array [
+  <div
+    className="header"
+  />,
+  <div
+    className="uploadFile"
+  >
+    <div
+      className="uploadButton"
+      onClick={[Function]}
+    >
+      Go to Upload Page
+    </div>
+  </div>,
+  <div
+    className="home"
+  />,
+]
+`;

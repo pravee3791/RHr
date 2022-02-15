@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 import FileUploader from "../components/fileUploader/fileUploader";
+import ErrorComponent  from "../pages/Error/error-component";
 import AWS from 'aws-sdk'
 
 const S3_BUCKET = 'rh-resourcefulhumans';
@@ -10,7 +11,7 @@ const REGION = 'us-west-2';
 
 
 AWS.config.update({
-    accessKeyId: ' ',
+    accessKeyId: '',
     secretAccessKey: ''
 })
 
@@ -24,6 +25,8 @@ function Upload() {
     const [progress, setProgress] = useState(0);
     const [isFileUploading, setIsFileUploading] = useState(false);
     const [isFileUploaded, setIsFileUploaded] = useState(false);
+    const [isError, setisError] = useState(false);
+    const [error, setError] = useState<any>('');
     const navigate = useNavigate();
     const submitForm = (e: any) => {
         e.preventDefault();
@@ -45,7 +48,12 @@ function Upload() {
                 }
             })
             .send((err) => {
-                if (err) console.log(err)
+                if (err) {
+                    const error = err;
+                    setisError(true) 
+                    setError(error)
+                }
+                    
             })
     };
     const navigateHome = () => {
@@ -71,7 +79,7 @@ function Upload() {
                 }
 
                 {
-                    isFileUploaded &&
+                    (isFileUploaded && !isError) &&
                     <div className='successMessage'>
                         File Successfully Uploaded.
                     </div>
@@ -94,6 +102,10 @@ function Upload() {
 
                         />
                     </div>
+                }
+                {
+                    isError &&  
+                    <ErrorComponent error={error}></ErrorComponent> 
                 }
             </div>
 

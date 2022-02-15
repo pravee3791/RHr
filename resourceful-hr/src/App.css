@@ -110,5 +110,10 @@ input[type="file"] {
 }
 .progessBarContainer{
   width: 50%;
-  /* width: 20rem; */
+}
+.authcontainer{
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

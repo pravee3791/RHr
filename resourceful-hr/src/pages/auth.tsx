@@ -7,7 +7,8 @@ function AuthPage(){
     }
     return(
         <div>
-            <div className="uploadFile">
+            <div className="header"></div>
+            <div className="authcontainer">
                 <div className="uploadButton" onClick={setISisAuthenticated}>
                    Authenticate User 
                 </div>

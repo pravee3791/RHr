@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, {  useState } from 'react'
 
 
 const FileUploader = ({ onFileSelectSuccess, onFileSelectError }: { onFileSelectSuccess: any, onFileSelectError: any }) => {
-    const fileInput = useRef<any>({})
     const [fileName, setFileName] = useState('');
     const handleFileInput = (e: any) => {
         const file = e.target.files[0];

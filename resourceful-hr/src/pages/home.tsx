@@ -30,14 +30,19 @@ export default function Home() {
                 dispatch(loadAlbum(res.data));
             })
     }, [])
+    // opent the image viewer component
     const openImageViewer = useCallback((index) => {
         setCurrentImage(index);
         setIsViewerOpen(true);
     }, []);
+
+    // close the image viewer component
     const closeImageViewer = () => {
         setCurrentImage(0);
         setIsViewerOpen(false);
     };
+
+    //navigate to the uplaod Page to upload the video
     const navigateToUpload = () =>{
         let path = 'upload'
         navigate(path);
