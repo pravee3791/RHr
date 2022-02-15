@@ -5,14 +5,15 @@ import "react-sweet-progress/lib/style.css";
 import FileUploader from "../components/fileUploader/fileUploader";
 import ErrorComponent  from "../pages/Error/error-component";
 import AWS from 'aws-sdk'
-
+// change the bucket name and area based on your s3 configurations
 const S3_BUCKET = 'rh-resourcefulhumans';
 const REGION = 'us-west-2';
 
 
+//for security purpose please provide your own key here 
 AWS.config.update({
-    accessKeyId: '',
-    secretAccessKey: ''
+    accessKeyId: 'xyz',
+    secretAccessKey: 'xyz'
 })
 
 const myBucket = new AWS.S3({

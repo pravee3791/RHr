@@ -1,11 +1,41 @@
-# Getting Started with Create React App
+#  Resourceful Humans App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the Front End Application for the assignment for the RH. This is an image based appliation  with following Features
+        <br/>
+    - Ability to show the images in the grid , 12*12 for desktops and laptops and 2*2 for mobile
+        <br/>
+    - Ability to upload video to the S3 bucket
+        <br/>
+    - Auth Guarding the routes
+        <br/>
+    - Display error in case of something went wrong
+        <br/>
+
+Following are the salient features of the Application 
+        <br/>
+    - Responsive for Desktop and Laptop
+        <br/>
+    - Uses the function component 
+        <br/>
+    - Uses Redux to share the data 
+        <br/>
+    - Uses Type Script
+        <br/>
+    - Custom Css (no use of external CSS libraries)
+        <br/>
+    - Routing 
+        <br/>
+    - Unit test case coverage
+
+Below are the external dependencies
+    - AWS SDK for the file uplaod
+
 
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `npm install`
+Install the node dependencies for the application
 ### `npm start`
 
 Runs the app in the development mode.\
